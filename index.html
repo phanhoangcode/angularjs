@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ProductController.js"></script>
+</head>
+<body>
+<div ng-controller="ProductController">
+    <h2>Name: {{infos.name}}, age: {{infos.age}}, address: {{infos.address}}</h2>
+    <input type="text" ng-model="infos.name" value="infos.name">
+    <br><br>
+    <hr>
+    <br>
+
+    <div ng-repeat="product in vm.productList">
+        <h5>{{product}} <br></h5>
+        <hr>
+        <br><br>
+        <h3>{{product.garen.name}}</h3>
+        <h3>{{product.katarina.name}}</h3>
+    </div>
+</div>
+</body>
+</html>
